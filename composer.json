@@ -1,0 +1,13 @@
+{
+    "name": "netho/one-switch",
+    "require-dev": {
+        "phpmailer/phpmailer": "^6.0"
+    },
+    "authors": [
+        {
+            "name": "Ernesto prado",
+            "email": "ernesto.prado.v@gmail.com"
+        }
+    ],
+    "require": {}
+}

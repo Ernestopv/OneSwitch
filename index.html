@@ -1,0 +1,559 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>OneSwitch</title>
+  <!-- Path to Framework7 Library CSS-->
+  <link rel="stylesheet" href="dist/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7-icons.css">
+  <!-- Path to your custom app styles-->
+  <link rel="stylesheet" href="css/my-app.css">
+  <link rel = "stylesheet" href = "css/framework7.ios.colors.min.css" />
+
+
+
+</head>
+<body>
+<!-- Status bar overlay for fullscreen mode-->
+<div class="statusbar-overlay"></div>
+<!-- Panels overlay-->
+<div class="panel-overlay"></div>
+<!-- Left panel with reveal effect-->
+<div class="panel panel-left panel-reveal">
+  <div class="content-block">
+    <p>Left panel content goes here</p>
+  </div>
+</div>
+<!-- Right panel with cover effect-->
+<div class="panel panel-right panel-cover">
+  <div class="content-block">
+    <p>Right panel content goes here</p>
+  </div>
+</div>
+<!-- Views, and they are tabs-->
+
+<!-- We need to set "toolbar-through" class on it to keep space for our tab bar-->
+<div class="views tabs toolbar-through">
+    <!-- login screen starts here -->
+  <!-- First view (for first wrap)-->
+  <div id="view-1" class="view view-main tab active">
+      <div class = "navbar">
+          <div class = "navbar-inner ">
+              <div class = "center sliding"><h1>OneSwitch</h1></div>
+              <br>
+          </div>
+      </div>
+      <div class = "pages">
+          <div data-page = "index" class = "page">
+              <div class = "page-content">
+                  <div class = "content-block ">
+                      <br>
+                      <h2 class="alineacion">Welcome again , Thank you for Thinking to Join In!!</h2>
+                      <form id="myform">
+                          <div class = "list-block ">
+                              <ul>
+                                  <li class = "item-content">
+                                      <div class = "item-inner">
+                                          <div class = "item-title label">Name</div>
+                                          <div class = "item-input ">
+                                               <input  type = "text" name = "name"  id="name" placeholder = "Enter your name"  >
+                                          </div>
+                                      </div>
+                                  </li>
+                              </ul>
+                              <br>
+                              <ul>
+                                  <li class = "item-content">
+                                      <div class = "item-inner">
+                                          <div class = "item-title label">Surname</div>
+                                          <div class = "item-input">
+                                              <input  type = "text" name = "surname" id="surname" placeholder = "Enter your Surname">
+                                          </div>
+                                      </div>
+                                  </li>
+                              </ul>
+                              <br>
+                              <ul>
+                                  <li class = "item-content">
+                                      <div class = "item-inner">
+                                          <div class = "item-title label">Email</div>
+                                          <div class = "item-input">
+                                              <input id="email" type = "text" name = "email" placeholder = "Enter the E-mail">
+                                          </div>
+                                      </div>
+                                  </li>
+                                  <li class = "item-content">
+                                      <div class = "item-inner">
+                                          <div class = "item-title label">Confirm Email</div>
+                                          <div class = "item-input">
+                                              <input id="cemail" type = "text" name = "cemail" placeholder = "Re-Enter the E-mail">
+                                          </div>
+                                      </div>
+                                  </li>
+                              </ul>
+                              <br>
+                              <ul>
+                                  <li class = "item-content">
+                                      <div class = "item-inner">
+                                          <div class = "item-title label">Password</div>
+                                          <div class = "item-input">
+                                              <input id="password" type = "password" name = "password" placeholder = "Enter the password">
+                                          </div>
+                                      </div>
+                                  </li>
+                                  <li class = "item-content">
+                                      <div class = "item-inner">
+                                          <div class = "item-title label">Confirm Password</div>
+                                          <div class = "item-input">
+                                              <input id="cpassword" type = "password" name = "cpassword" placeholder = "Re-enter the password">
+                                          </div>
+                                      </div>
+                                  </li>
+                              </ul>
+                              <br>
+                              <ul>
+                                  <li class = "item-content">
+                                      <div class = "item-inner">
+                                          <div class = "item-title label">DeviceI.d.*</div>
+                                          <div class = "item-input">
+                                              <input id='deviceid' type = "text" name = "deviceid" placeholder = "Enter your Device I.d.">
+                                          </div>
+                                      </div>
+                                  </li>
+                              </ul>
+                          </div>
+                          <br>
+                          <div class = "list-block">
+                              <ul>
+                                  <li><a id="create"  href = "#" class = "item-link sign  button-fill button " name="create"  >Create Profile</a></li>
+                              </ul>
+                              <p><a href = "#" class = "open-login-screen button button-fill">Click here to open Login Screen</a></p>
+
+                          </div>
+                      </form>
+                      <br>
+                      <br>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+
+    <div class = "login-screen modal-in">
+        <div class = "view">
+            <div class = "page">
+                <div class = "page-content login-screen-content">
+
+                   
+                    <div class = "login-screen-title"><img src="oneswitch.jpg" height="100" width="250"></div>
+                   
+                    
+                    <form  id="login-form" >
+                        <div class = "list-block">
+                            <ul>
+                                <li class = "item-content">
+                                    <div class = "item-inner">
+                                        <div class = "item-title label">Email</div>
+                                        <div class = "item-input passworderror">
+                                            <input id="fusername" type = "text" name = "fusername"    placeholder = "Enter the E-mail">
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class = "item-content">
+                                    <div class = "item-inner">
+                                        <div class = "item-title label">Password</div>
+                                        <div class = "item-input">
+                                            <input type = "password" name = "fpassword" id="fpassword" placeholder = "Enter the password">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <br>
+                        <div class = "list-block dialog">
+                            <ul>
+                                <li><a id="recover" name="forgot" href = "#" class = "item-link  button-fill alineacion " Style="color:dodgerblue" >Forgot Password?</a></li>
+                                <br>
+                                <li><a id="sub"  href = "#" class = "item-link  sign button-fill button " type="submit"   name="sub" >Log In</a></li>
+
+                            </ul>
+                            <p><a href = "#" class = "close-login-screen button-fill button">Create a New Account</a></p>
+                            <br>
+                            <p><a id="loginFace" href = "#" class = " button-fill button" onclick="loginFacebook();checkLoginState();">Login with Facebook </a></p>
+                        </div>
+
+                    </form>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+<!-- login screen ends here -->
+
+
+</div>
+    </div>
+
+
+  <!-- Second view (for second wrap)-->
+  <div id="view-2" class="view tab">
+    <!-- We can make with view with navigation, let's add Top Navbar-->
+    <div class="navbar">
+
+      <!-- Title of the page-->
+      <div class="navbar-inner">
+        <div class="center sliding"><h1>Plugs</h1></div>
+      </div>
+    </div>
+    <div class="pages navbar-through">
+      <div data-page="index-2" class="page">
+        <div class="page-content">
+          <div class="content-block">
+
+            <!-- Empty div to display ports -->
+            <div id="pleaseLogin">
+
+            </div>
+
+            <div id ="ports">
+              <div class="list-block">
+                <ul>
+
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-toggle"></i>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title label">
+                            <h3>Port 16</h3>
+                        </div>
+                        <div class="item-input">
+                          <label class="label-switch">
+                            <input type="checkbox" id="port16">
+                            <div class="checkbox"></div>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-toggle"></i>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title label">
+                            <h3>Port 19</h3>
+                        </div>
+                        <div class="item-input">
+                          <label class="label-switch">
+                            <input type="checkbox" id="port19">
+                            <div class="checkbox"></div>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-toggle"></i>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title label">
+                            <h3>Port 20</h3>
+                        </div>
+                        <div class="item-input">
+                          <label class="label-switch">
+                            <input type="checkbox" id="port20">
+                            <div class="checkbox"></div>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-toggle"></i>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title label">
+                            <h3>Port 26</h3>
+                        </div>
+                        <div class="item-input">
+                          <label class="label-switch">
+                            <input type="checkbox" id="port26">
+                            <div class="checkbox"></div>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- second view finish -->
+
+    <!-- 3rd view starts  -->
+
+
+
+    <!-- 3rd view ends -->
+
+
+
+    <!-- 4rd view starts  -->
+
+
+    <div id="view-4" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+
+            <!-- Title of the page-->
+            <div class="navbar-inner">
+                <div class="center sliding"><h1>My Profile</h1></div>
+            </div>
+        </div>
+        <div class="pages navbar-through">
+            <div data-page="index-2" class="page">
+                <div class="page-content">
+                    <div class="content-block">
+
+                        <br>
+                        <h2 class="alineacion">Profile Information</h2>
+                        <form id="myform2">
+                            <div class = "list-block ">
+                                <ul>
+                                    <li class = "item-content">
+                                        <div class = "item-inner">
+                                            <div class = "item-title label">Name</div>
+                                            <div class = "item-input ">
+                                                <input id="pname" type = "text" name = "name"    placeholder = "Enter your name"  >
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <br>
+                                <ul>
+                                    <li class = "item-content">
+                                        <div class = "item-inner">
+                                            <div class = "item-title label">Surname</div>
+                                            <div class = "item-input">
+                                                <input id="psurname" type = "text" name = "surname" placeholder = "Enter your Surname">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <br>
+                                <ul>
+                                    <li class = "item-content">
+                                        <div class = "item-inner">
+                                            <div class = "item-title label">Email</div>
+                                            <div class = "item-input">
+                                                <label class="pemail" type = "text" name = "email" ></label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <br>
+                                <ul>
+                                    <li class = "item-content">
+                                        <div class = "item-inner">
+                                            <div class = "item-title label">DeviceI.d.*</div>
+                                            <div class = "item-input">
+                                                <input id="pdeviceid" type = "text" name = "deviceid" placeholder = "Enter your Device I.d.">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <br>
+                            <div class = "list-block">
+                                <ul>
+                                    <li><a id="edit"  href = "#" class = " button-fill button " name="edit"  value="edit" >Update Profile</a></li>
+                                </ul>
+                                <br>
+                                <a id="ChangePassword"  href = "#view-3" class = "item-link tab-link  button-fill button " name="ChangePassword"  >Change Password</a>
+                            </div>
+                        </form>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4rd view ends -->
+
+    <!-- 5 view starts -->
+
+    <div id="view-3" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+
+            <!-- Title of the page-->
+            <div class="navbar-inner">
+                <div class="center sliding"><h1>My Profile</h1></div>
+            </div>
+        </div>
+        <div class="pages navbar-through">
+            <div data-page="index-2" class="page">
+                <div class="page-content">
+                    <div class="content-block">
+
+                        <br>
+                        <h2 class="alineacion">Setting new Password</h2>
+                        <form id="myform3">
+                            <div class = "list-block ">
+                                <ul>
+                                    <li class = "item-content">
+                                        <div class = "item-inner">
+                                            <div class = "item-title label">User</div>
+                                            <div class = "item-input">
+                                                <label class="pemail" type = "text" name = "email" ></label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <ul>
+                                    <li class = "item-content">
+                                        <div class = "item-inner">
+                                            <div class = "item-title label">Current Password</div>
+                                            <div class = "item-input">
+                                                <input id="currentPassword" type = "password" name = "cupassword" placeholder = "Enter CurrentPassword">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <br>
+                                <ul>
+                                    <li class = "item-content">
+                                        <div class = "item-inner">
+                                            <div class = "item-title label">New Password</div>
+                                            <div class = "item-input">
+                                                <input id='newPassword' type = "password" name = "new Password" placeholder = "Enter New Password">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class = "item-content">
+                                        <div class = "item-inner">
+                                            <div class = "item-title label">New Password</div>
+                                            <div class = "item-input">
+                                                <input id='cnewPassword' type = "password" name = "cnewPassword" placeholder = "Confirm New Password">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <br>
+                            <div class = "list-block">
+                                <ul>
+                                    <li><a id="resetPassword"  href = "#" class = "item-link sign  button-fill button " name="resetPassword"  >Reset Password</a></li>
+                                </ul>
+                                <br>
+                                <a id="back"  href = "#view-4" class = "item-link tab-link  button-fill button " name="back"  >Back</a>
+                            </div>
+                        </form>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 5 view ends -->
+
+
+
+
+
+    <!-- Bottom Tabbar-->
+  <div id='barra' class="toolbar tabbar tabbar-labels">
+    <div class="toolbar-inner">
+      <a id="login" href="#view-1" class="tab-link active">
+        <i class="icon tabbar-demo-icon-1"></i>
+        <span class="tabbar-label">Welcome!</span></a>
+
+      <a id="plug" href="#view-2" class="tab-link">
+        <i class="icon tabbar-demo-icon-2"></i>
+        <span class="tabbar-label">My ports</span></a>
+
+        <a id="profile" href="#view-4" class="tab-link">
+            <i class="f7-icons">person</i>
+            <span class="tabbar-label">My Profile</span></a>
+
+
+        <a id='logoutButton' onclick="logingOut();"  href="#view-5"   class="tab-link">
+            <i class="f7-icons">logout</i>
+            <span class="tabbar-label" >Log out</span></a>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Path to Framework7 Library JS-->
+<script type="text/javascript" src="dist/js/framework7.min.js"></script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=1771803889782309&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+
+<!-- Path to your app js-->
+<script type="text/javascript" src="js/my-app.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
